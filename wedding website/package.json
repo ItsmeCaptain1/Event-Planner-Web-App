@@ -1,0 +1,31 @@
+{
+  "name": "eventwebapp",
+  "version": "1.0.0",
+  "description": "Web app for the event planner application",
+  "main": "index.js",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^4.0.0",
+    "bootstrap-icons": "^1.5.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsmeCaptain1/Event-Planner-Web-App.git"
+  },
+  "author": "Himanshu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItsmeCaptain1/Event-Planner-Web-App/issues"
+  },
+  "homepage": "https://github.com/ItsmeCaptain1/Event-Planner-Web-App#readme"
+}

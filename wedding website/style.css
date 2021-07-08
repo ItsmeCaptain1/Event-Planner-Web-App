@@ -79,10 +79,11 @@ header {
   justify-content: space-between;
 }
 
-header .logo {
-  font-size: 2.5rem;
+header .logo img {
+  /* font-size: 2.5rem;
   color: #fff;
-  font-weight: bolder;
+  font-weight: bolder; */
+  width: 80px;
 }
 
 header .navbar a {
@@ -109,7 +110,7 @@ header .navbar a:hover {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(images/mzR6qn.jpg) no-repeat;
+  background: url(images/client-1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -503,4 +504,30 @@ header .navbar a:hover {
   html {
     font-size: 50%;
   }
+}
+
+#google_button{
+  display: inline-block;
+  height: 100px;
+}
+
+h1{
+  font-size: 4rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.venue-description{
+  color: #fff;
+  font-size:20px;
+}
+
+.carousel-item img{
+  height: 50rem;
+  width:100%;
+}
+
+address{
+  color: #eee;
+  font-size: small;
 }
