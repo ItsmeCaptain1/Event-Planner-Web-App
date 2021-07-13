@@ -1,3 +1,5 @@
+// const { start } = require("@popperjs/core");
+
 const firebaseConfig = {
     apiKey: "AIzaSyCUBMNiPuiZEdf-WApcqkqWJXUhZlE2Opw",
     authDomain: "event-planner-udaipur.firebaseapp.com",
@@ -416,10 +418,16 @@ function completebooking(){
   const sdate=form.elements['startdate'].value;
   const edate=form.elements['enddate'].value;
   const guests=form.elements['guests'].value;
+  
+//  var startdate = Date.parse(sdate);
+ var startdate=new Date(sdate);
+ console.log("start date is "+startdate);
+ 
+ var enddate = new Date(edate);
 
   database.collection('bookings').add({
-         startDate:firebase.firestore.Timestamp.fromDate(Date.parse(sdate)),
-         endDate:firebase.firestore.Timestamp.fromDate(edate),
+         startDate:startdate,
+         endDate:enddate,
          startTime:stime,
          endTime:etime,
          peoples:guests,

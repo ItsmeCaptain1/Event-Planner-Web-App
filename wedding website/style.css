@@ -80,11 +80,15 @@ header {
   justify-content: space-between;
 }
 
+header .logo{
+  font-size: 3rem;
+  color:var(--black);
+  text-transform: capitalize;
+  font-family: fantasy;
+}
+
 header .logo img {
-  /* font-size: 2.5rem;
-  color: #fff;
-  font-weight: bolder; */
-  width: 80px;
+  height: 5rem;
 }
 
 header .navbar a {
@@ -292,6 +296,12 @@ header .navbar a:hover {
   height: 15rem;
   width: 15rem;
   padding: 1rem;
+  transition: transform .2s;
+}
+.team .box-container .box img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
 
 .team .box-container .box h3 {
@@ -415,11 +425,12 @@ header .navbar a:hover {
 }
 
 .footer {
-  padding: 2.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 2rem;
-  color: var(--black);
-  background: #fff;
+  color: white;
+  background:var(--pink);
   text-align: center;
+
 }
 
 .footer span {
