@@ -18,7 +18,7 @@
 
 <header>
 
-    <a href="#" class="logo"><img src="images/logo.png"/><h1>Event Planner</h1></a>
+    <a href="#" class="logo"><img src="images/logo.png"><h2>Event Planner</h2></a></a>
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
@@ -56,21 +56,21 @@
         <span>01</span>
         <h3>Choose Your Event</h3>
         <p>Choose the type of event you are planning</p>
-        <a href="#" class="btn">learm more</a>
+        <a href="#event" class="btn">learm more</a>
     </div>
 
     <div class="step">
         <span>02</span>
         <h3>Select A Venue</h3>
         <p>Select from a List of high-class Venues</p>
-        <a href="#" class="btn">learm more</a>
+        <a href="Venue.html" class="btn">learm more</a>
     </div>
 
     <div class="step">
         <span>03</span>
         <h3>Book Your Venue</h3>
-        <p>Book the Venue with your priority date and time</p>
-        <a href="#" class="btn">learm more</a>
+        <p>Book the Venue with your priority</p>
+        <a href="#event" class="btn">learm more</a>
     </div>
 
 </section>
@@ -84,17 +84,17 @@
         <img src="images/header-img.png" alt="">
     </div>
 
-    <div class="box-container">
+    <div class="box-container" id="event-box-container">
 
-        <div class="box">
+    <!--    <div class="box">
             <img src="images/img1.jpg" alt="">
             <div class="info">
-                <h3>dressing</h3>
+                <h3>bday</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, dolores.</p>
-                <a href="#" class="btn">learm more</a>
+                <a href="#" class="btn">Search Venues</a>
             </div>
         </div>
-
+ 
         <div class="box">
             <img src="images/img2.jpg" alt="">
             <div class="info">
@@ -138,13 +138,13 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, dolores.</p>
                 <a href="#" class="btn">learm more</a>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
 </section>
 
-<!-- event section starts -->
+<!-- event section ends -->
 
 <!-- vendor section starts  -->
 
@@ -155,9 +155,9 @@
         <img src="images/header-img.png" alt="">
     </div>
 
-    <div class="box-container">
+    <div class="box-container" id="venue-box-container">
 
-        <div class="box">
+        <!-- <div class="box">
             <img src="images/img1.jpg" alt="">
             <div class="info">
                 <h3>dressing</h3>
@@ -209,7 +209,7 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, dolores.</p>
                 <a href="#" class="btn">learm more</a>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -317,6 +317,18 @@
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
         </div>
+        <div class="box">
+            <img src="images/team-3.png" alt="">
+            <h3>john deo</h3>
+            <span>wedding planner</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta nisi ea quisquam ipsa molestias itaque, quod quis id doloremque similique!</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
 
     </div>
 
@@ -333,17 +345,17 @@
         <img src="images/header-img.png" alt="">
     </div>
 
-    <form action="">
+    <form id="feedform">
         <div class="inputBox">
-            <input type="text" placeholder="your name">
-            <input type="email" placeholder="your email">
+            <input name="feedname" type="text" placeholder="your name">
+            <input name="feedmail" type="email" placeholder="your email">
         </div>
         <div class="inputBox">
-            <input type="number" placeholder="your number">
-            <input type="text" placeholder="your address">
+            <input name="feednumber" type="number" placeholder="your number">
+            <input name="feedaddress" type="text" placeholder="your address">
         </div>
-        <textarea placeholder="say something" name="" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="send message" class="btn">
+        <textarea name="feedmessage" placeholder="say something" name="" id="" cols="30" rows="10"></textarea>
+        <input value="send message" class="btn" onclick="formSubmit()">
     </form>
 
 </section>
@@ -396,29 +408,17 @@
 
 <div class="footer"> created by <span>mr. web designer</span> | all rights reserved! </div>
 
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<script src="js/index.js"></script>
+<script>
+    loadevents();
+    loadvenues();
+</script>
 
 <script> 
 
