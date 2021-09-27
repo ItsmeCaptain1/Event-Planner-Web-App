@@ -7,16 +7,27 @@
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "bootstrap-icons": "^1.5.0",
-    "lite-server": "^2.6.1"
+    "butternut": "^0.4.6",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "lite-server": "^2.6.1",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run lite",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin images/* --out-dir='dist/img'",
+    "usemin": "usemin Venue.html -d dist --htmlmin -o dist/Venue.html && usemin venueDetail.html -d dist --htmlmin -o dist/venueDetail.html && usemin index.html -d dist --htmlmin -o dist/index.html && usemin Booking.html -d dist --htmlmin -o dist/Booking.html",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "repository": {
     "type": "git",
